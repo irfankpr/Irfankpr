@@ -516,7 +516,7 @@
                 <h4>Call:</h4>
                 <p>+1 5589 55488 55s</p>
               </div>
-              <div class="phone" id="lcn">
+              <div class="phone" >
                 <i class="material-symbols-outlined bi">
                   public
                   </i>
@@ -533,7 +533,7 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="fName" placeholder="Your Name" oninput="isname()" required>
+                  <input type="text" name="name" class="form-control" id="fName" placeholder="Your Name" oninput="isname()" onblur="isempty()" required>
                   <h6 class="formwarning" id="nameWarning" style="font-size: 13px;"></h6>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
@@ -542,7 +542,7 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="email" id="mail" placeholder="e-mail" onblur="isMail()" required>
+                <input type="text" class="form-control" name="email" id="mail" placeholder="e-mail &nbsp; ( Optional )" onblur="isMail()">
                 <h6 class="formwarning" id="mWarning" style="font-size: 13px;"></h6>
               </div>
               <div class="form-group mt-3">
@@ -550,7 +550,7 @@
                 <h6 class="formwarning" id="subWarning" style="font-size: 13px;"></h6>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" ></textarea>
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" id="lcn" ></textarea>
                 <h6 class="msgwarning" id="msgWarning" style="font-size: 13px;"></h6>
               </div>
               <div class="my-3">

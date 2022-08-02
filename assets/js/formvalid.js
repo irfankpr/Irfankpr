@@ -25,9 +25,9 @@ function isTen() {
     var x = document.getElementById("phone").value;
     var len = x.length;
     if (len == 0) {
-        document.getElementById("phnWarning").innerHTML = "";
+        document.getElementById("phnWarning").innerHTML = "Phone no cannot be empty";
     } else if (len < 10 || len > 10) {
-        document.getElementById("phnWarning").innerHTML = "Contact number must be 10 digit.";
+        document.getElementById("phnWarning").innerHTML = "Phone no must be 10 digit.";
     } else {
         document.getElementById("phnWarning").innerHTML = "";
     }
@@ -46,6 +46,13 @@ function isMail() {
 function isempty(){
     var x= document.getElementById("subject").value.length;
     var m= document.getElementById("message").value.length;
+    var n = document.getElementById("fName").value.length;
+
+    if(n==0){
+        document.getElementById("nameWarning").innerHTML = "Name cannot be empty"
+    }else{
+        document.getElementById("nameWarning").innerHTML = ""
+    }
 
     if(x==0){
         document.getElementById("subWarning").innerHTML = "Please enter the subject";
