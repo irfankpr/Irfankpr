@@ -23,7 +23,7 @@ function isn() {
     var ph = document.getElementById("phone").value;
     var z = isNaN(ph)
     if (z == 1) {
-        document.getElementById("phnWarning").innerHTML = "Contact must be numeric !";
+        document.getElementById("phnWarning").innerHTML = "Phone no must be numeric !";
     } else {
         document.getElementById("phnWarning").innerHTML = "";
     }
@@ -32,11 +32,14 @@ function isn() {
 function isTen() {
     var x = document.getElementById("phone").value;
     var len = x.length;
+    var a= isNaN(x);
     if (len == 0) {
         document.getElementById("phnWarning").innerHTML = "Phone no cannot be empty";
-    } else if (len < 10 || len > 10) {
+    } else if(x != 1){
+        document.getElementById("phnWarning").innerHTML = "Phone no must be numeric";
+    }else if (len < 10 || len > 10) {
         document.getElementById("phnWarning").innerHTML = "Phone no must be 10 digit.";
-    } else {
+    } else{
         document.getElementById("phnWarning").innerHTML = "";
     }
 }
