@@ -10,6 +10,14 @@ function isname() {
     }
 }
 
+function nameempty() {
+    var n = document.getElementById("fName").value.length;
+    if (n == 0) {
+        document.getElementById("nameWarning").innerHTML = "Name cannot be empty"
+    }
+}
+
+
 
 function isn() {
     var ph = document.getElementById("phone").value;
@@ -43,26 +51,34 @@ function isMail() {
     }
 }
 
-function isempty(){
-    var x= document.getElementById("subject").value.length;
-    var m= document.getElementById("message").value.length;
-    var n = document.getElementById("fName").value.length;
+function isemptys() {
+    var x = document.getElementById("subject").value.length;
 
-    if(n==0){
-        document.getElementById("nameWarning").innerHTML = "Name cannot be empty"
-    }else{
-        document.getElementById("nameWarning").innerHTML = ""
-    }
-
-    if(x==0){
+    if (x == 0) {
         document.getElementById("subWarning").innerHTML = "Please enter the subject";
-    }else{
+    } else {
         document.getElementById("subWarning").innerHTML = "";
     }
 
+}
+
+function isemptym(){
+    var m= document.getElementById("message").value.length;
     if(m==0){
         document.getElementById("msgWarning").innerHTML = "It's better to add a massage. Even though you can submit without one.";
     }else{
         document.getElementById("msgWarning").innerHTML = "";
     }
+
+}
+function cllr(){
+    var m= document.getElementById("message").value.length;
+    var s = document.getElementById("subject").value.length;
+    if(m!=0){
+    document.getElementById("msgWarning").innerHTML = "";
+    }
+    if(s!=0){
+    document.getElementById("subWarning").innerHTML = "";
+}
+
 }
