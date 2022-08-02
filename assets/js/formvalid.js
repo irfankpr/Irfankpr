@@ -45,7 +45,7 @@ function isMail() {
 
 function isempty(){
     var x= document.getElementById("subject").value.length;
-    var m= document.getElementById("message").value;
+    var m= document.getElementById("message").value.length;
 
     if(x==0){
         document.getElementById("subWarning").innerHTML = "Please enter the subject";
