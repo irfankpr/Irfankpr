@@ -61,7 +61,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#lcn" class="get-started-btn scrollto">Locate ME</a>
+      <a href="#lcn" class="get-started-btn ">Locate ME</a>
 
     </div>
   </header><!-- End Header -->
@@ -117,7 +117,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -501,7 +501,7 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
+                <h4 id="lcn">Location:</h4>
                 <p>A108 New Lark street, Kochi</p>
               </div>
 
@@ -516,6 +516,13 @@
                 <h4>Call:</h4>
                 <p>+1 5589 55488 55s</p>
               </div>
+              <div class="phone">
+                <i class="material-symbols-outlined bi">
+                  public
+                  </i>
+                <h4>Follow me</h4>
+                <p>Links are below</p>
+              </div>
 
             </div>
 
@@ -526,17 +533,25 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="fName" placeholder="Your Name" oninput="isname()" required>
+                  <h6 class="formwarning" id="nameWarning" style="font-size: 13px;"></h6>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="text" class="form-control" name="Phone" id="phone" placeholder="Phone &nbsp; ( whats app preffered )" oninput="isn()" onblur="isTen()" required>
+                  <h6 class="formwarning" id="phnWarning" style="font-size: 13px;"></h6>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="email" id="mail" placeholder="e-mail" onblur="isMail()" required>
+                <h6 class="formwarning" id="mWarning" style="font-size: 13px;"></h6>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" onblur="isempty()" required>
+                <h6 class="formwarning" id="subWarning" style="font-size: 13px;"></h6>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                <h6 class="msgwarning" id="msgWarning" style="font-size: 13px;"></h6>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -550,7 +565,7 @@
 
         </div>
         <section >
-          <iframe style="border:0; width: 100%; height: 270px;" id="lcn" class="m-5 lcn" 
+          <iframe style="border:0; width: 100%; height: 300px;" class="container-fluid row" 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15718.718013971924!2d76.23600671948118!3d9.960600836049815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b086d314f0b178d%3A0xc545233f390db43b!2sFort%20Kochi%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1659366038528!5m2!1sen!2sin"
             frameborder="0" allowfullscreen></iframe>
         </section>
@@ -641,6 +656,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/js/formvalid.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

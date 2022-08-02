@@ -170,7 +170,7 @@ h6 {
   border-radius: 4px;
   padding: 7px 25px 8px 25px;
   white-space: nowrap;
-  transition: 0.3s;
+  transition: 0.5s;
   font-size: 14px;
   display: inline-block;
   border: 2px solid #ffc451;
@@ -178,7 +178,8 @@ h6 {
 
 .get-started-btn:hover {
   background: #ffbb38;
-  color: #343a40;
+  color: #262627;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
@@ -519,7 +520,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -1343,10 +1344,14 @@ section {
   color: #151515;
   transition: 0.4s;
   border-radius: 4px;
+  outline: #ffcd6b;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #ffcd6b;
+  background: #ffffff;
+  color: #f0b43b;
+  background: none;
+  outline: solid 2px #ffc451;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1588,4 +1593,16 @@ section {
 
 .material-symbols-outlined {
   font-size: 50px;
+}
+.formwarning{
+  color: red;
+  text-align: center;
+  font-weight: 500;
+  font-family: monospace;
+}
+.msgwarning{
+  color: rgb(156, 74, 74);
+  text-align: center;
+  font-weight: 500;
+  font-family: monospace;
 }
