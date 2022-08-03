@@ -68,7 +68,7 @@ function isemptys() {
 function isemptym(){
     var m= document.getElementById("message").value.length;
     if(m==0){
-        document.getElementById("msgWarning").innerHTML = "It's better to add a massage. Even though you can submit without one.";
+        document.getElementById("msgWarning").innerHTML = "It's better to add a message. Even though you can submit without one.";
     }else{
         document.getElementById("msgWarning").innerHTML = "";
     }
