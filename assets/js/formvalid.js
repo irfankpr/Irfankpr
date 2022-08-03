@@ -35,7 +35,7 @@ function isTen() {
     var a= isNaN(x);
     if (len == 0) {
         document.getElementById("phnWarning").innerHTML = "Phone no cannot be empty";
-    } else if(x != 1){
+    } else if(a != 0){
         document.getElementById("phnWarning").innerHTML = "Phone no must be numeric";
     }else if (len < 10 || len > 10) {
         document.getElementById("phnWarning").innerHTML = "Phone no must be 10 digit.";
