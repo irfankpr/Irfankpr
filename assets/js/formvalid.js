@@ -36,7 +36,7 @@ function isTen() {
     if (len == 0) {
         document.getElementById("phnWarning").innerHTML = "Phone no cannot be empty";
     } else if(a != 0){
-        document.getElementById("phnWarning").innerHTML = "Phone no must be numeric";
+        document.getElementById("phnWarning").innerHTML = "Phone no must be numeric !";
     }else if (len < 10 || len > 10) {
         document.getElementById("phnWarning").innerHTML = "Phone no must be 10 digit.";
     } else{
